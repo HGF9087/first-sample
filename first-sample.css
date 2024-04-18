@@ -1,0 +1,224 @@
+@font-face {
+    font-family: "TTLakes";
+    src: url(fonts/TTLakes/TTLakes-Italic.woff),
+    url(fonts/TTLakes/TTLakes-Italic.eot),
+    url(fonts/TTLakes/TTLakes-Italic.ttf);
+    font-style: italic;
+}
+@font-face {
+    font-family: "TTLakes";
+    src: url(fonts/TTLakes/TTLakesCondensed-Bold.woff),
+    url(fonts/TTLakes/TTLakesCondensed-Bold.eot),
+    url(fonts/TTLakes/TTLakesCondensed-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: "TTLakes";
+    src: url(fonts/TTLakes/TTLakesCondensed-Regular.woff),
+    url(fonts/TTLakes/TTLakesCondensed-Regular.eot),
+    url(fonts/TTLakes/TTLakesCondensed-Regular.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: "TTLakes";
+    src: url(fonts/TTLakes/TTLakes-DemiBold.woff),
+    url(fonts/TTLakes/TTLakes-DemiBold.eot),
+    url(fonts/TTLakes/TTLakes-DemiBold.ttf);
+    font-weight: 600;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+    box-shadow: none;
+    text-shadow: none;
+    font-style: normal;
+}
+body{
+    background-color: #F8F8F8;
+    font-family: 'TTLakes', 'Helvetica', sans-serif;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 88px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #D9FFF5;
+    padding: 0 8px;
+}
+ .header-left{
+        display: flex;
+    align-items: center;
+}
+.header-center{
+        display: none;
+        align-items: center;
+}
+.header-right{
+        display: flex;
+        align-items: center;
+}
+.button{
+    height: 42px;
+    width: 42px;
+    background: none;
+    background-repeat: no-repeat;
+    border: 0px;
+}
+.header__button{
+    margin: 8px;
+}
+.header__left-line{
+    height: 30px;
+    border: 1px solid;
+    border-color: #EAEAEA;
+    border-radius: 1px;
+    display:none
+}
+.header__right-line{
+    height: 30px;
+    width: 0;
+    border: 1px solid;
+    border-color: #EAEAEA;
+    border-radius: 1px;
+}
+.header__button-text{
+    size: 16px;
+    color: #1B1C21;
+    font-weight: 600;
+    display: none;
+}
+.header__button-call{
+    background-image: url(header/call.svg);
+}
+.header__button-chat{
+    background-image: url(header/chat.svg);
+}
+.header__button-profile{
+    background-image: url(header/profile.svg);
+}
+.header__button-menu{
+    background-image: url(header/menu.svg);
+}
+.header__button-checkstatus{
+    background-image: url(header/checkstatus.svg);
+}
+.header__button-repair{
+    background-image: url(header/repair.svg);
+}
+.title{
+    display: flex;
+    align-items: center;
+    height: 88px;
+    font-size: 28px;
+    font-style: bold;
+}
+.title__line{
+    height: 40px;
+    border: 2px solid #41F6D7;
+    border-radius: 0 4px 4px 0;
+    margin-right: 12px;
+}
+.navigation{
+    padding-left: 16px;
+    padding-bottom: 8px;
+    margin: 0;
+    display: flex;
+    overflow: auto;
+}
+.navigation__button{
+    font-family: 'TTLakes', 'Helvetica', sans-serif;
+    height: 40px;
+    padding:  8px 10px 8px 16px;
+    border: 2px solid rgba(0, 0, 0, 0);
+    color: #7E7E82;
+    border-radius: 5px;
+    background-color: inherit;
+}
+.navigation__button:hover {
+     border: 2px solid #B8FFEC;
+    background-color: white;
+}
+.navigation__fade{
+    position: absolute;
+    right: 0;
+    height: 40px;
+    width: 24px;
+    border: none;
+    z-index: 10;
+    background: linear-gradient(to left, white, transparent)
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    font-style: normal;
+}
+.content{
+    padding: 16px;
+}
+.content__about{
+    margin-bottom: 16px;
+    font-size: 14px;
+    color: #1B1C21;
+}
+.piece2{
+    display: none;
+}
+.piece3{
+    display: none;
+}
+.show-more{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #1B1C21;
+    height: 24px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+}
+.show-more__icon{
+    height: 24px;
+    width: 24px;
+    background-image: url(show-more/icon.svg);
+    background-repeat: no-repeat;
+    background-position:center;
+}
+.content__signboard{
+    padding-top: 16px;
+    width: 100%;
+}
+@media (min-width: 768px){
+    .content{
+        max-width: 45%;
+    }
+    .content__signboard{
+        max-width: 50%;
+    }
+    .piece2{
+        display: inline;
+    }
+    .header__left-line{
+        display: inline-block;
+    }
+    .header-center{
+        display: flex;
+    }
+}
+@media (min-width:1120px){
+    .header{
+        height: auto;
+        display: inline-block;
+        float: right;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+
+    }
+    .header-left{display: none;}
+    .header-center{display: none;}
+    .header__right-line{display: none;}
+    .header__button-text{display: inline;}
+    .piece3{
+        display: inline;
+    }
+}
